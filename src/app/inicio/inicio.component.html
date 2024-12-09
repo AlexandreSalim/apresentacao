@@ -1,0 +1,85 @@
+<header class="bg-slate-700 text-white">
+    <!-- Menu desktop -->
+    <nav class="hidden sm:flex gap-10 p-5">
+        <a href="#" class="hover:text-blue-400">Apresentação</a>
+        <a href="#" class="hover:text-blue-400">Projetos</a>
+        <a href="#" class="hover:text-blue-400">Conhecimentos</a>
+    </nav>
+
+    <!-- Menu mobile -->
+    <nav class="sm:hidden flex items-center justify-between bg-slate-600 p-5">
+        <mat-icon (click)="sidBar()" class="cursor-pointer">menu</mat-icon>
+        <mat-icon class="cursor-pointer">account_circle</mat-icon>
+    </nav>
+
+    <!-- Menu lateral (mobile) -->
+    <div *ngIf="abrir" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg flex flex-col p-5 z-50">
+        <div class="flex justify-between w-full">
+            <a href="#" class="mb-5 text-slate-700 hover:text-blue-500">Apresentação</a>
+            <mat-icon (click)="sidBar()" class="cursor-pointer text-black">close</mat-icon>
+        </div>
+        <a href="#" class="mb-5 text-slate-700 hover:text-blue-500">Projetos</a>
+        <a href="#" class="text-slate-700 hover:text-blue-500">Conhecimentos</a>
+    </div>
+</header>
+
+<main class="p-5">
+    <!-- Cards de habilidades -->
+    <section class="grid gap-5 sm:grid-cols-3">
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Habilidades Básicas</h2>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+        </div>
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Frameworks</h2>
+            <p>Angular</p>
+            <p>Ionic</p>
+            <p>TailwindCSS</p>
+        </div>
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Experiência</h2>
+            <p>Criação de interfaces responsivas</p>
+            <p>Desenvolvimento de aplicativos móveis</p>
+            <p>Integração de APIs REST</p>
+        </div>
+    </section>
+
+    <section class="p-5 bg-slate-600 text-white mt-5 rounded-lg shadow-md text-center">
+        <h1>Apresentação</h1>
+        <p>
+            Meu nome é Alexandre salim, tenho 24 anos e sou um desenvolvedor front-end apaixonado por criar interfaces dinâmicas
+            e responsivas. Gosto de transformar ideias em experiências digitais, utilizando tecnologias como HTML, CSS,
+            JavaScript, Angular e TailwindCSS. Estou em constante aprendizado e busco oportunidades para crescer na área
+            de desenvolvimento, trabalhando em projetos desafiadores que valorizem a criatividade e a eficiência.
+        </p>
+    </section>
+
+    <!-- Cards de projetos -->
+    <section class="grid gap-5 mt-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Aplicativo feito com Ionic</h2>
+            <a href="https://alexandresalim.github.io/projeto-aliancados/login" target="_blank"
+                rel="noopener noreferrer" class="text-blue-400 hover:underline">Acesse o aplicativo</a>
+            <br>
+            <a href="https://jsonplaceholder.typicode.com/users" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 hover:underline">Acesse aqui para pegar o username e o email</a>
+        </div>
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Site para vendas</h2>
+            <a href="https://alexandresalim.github.io/alexarrandroBarcos/" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 hover:underline">Acesse o site</a>
+        </div>
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Tela de login</h2>
+            <a href="https://alexandresalim.github.io/logoIpsum/" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 hover:underline">Veja o projeto</a>
+        </div>
+        <div class="p-5 bg-slate-600 text-white rounded-lg shadow-md text-center">
+            <h2 class="text-lg font-bold mb-3">Outros projetos</h2>
+            <a href="https://github.com/AlexandreSalim" target="_blank" rel="noopener noreferrer"
+                class="text-blue-400 hover:underline">Acesse o GitHub</a>
+        </div>
+    </section>
+</main>
